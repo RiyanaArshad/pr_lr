@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Machine Learning App</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { margin: 20px auto; padding: 20px; width: 300px; background: #f8f8f8; border-radius: 8px; }
+        input, button { margin: 10px; padding: 10px; width: 90%; }
+    </style>
+</head>
+<body>
+    <h1>Machine Learning Predictions</h1>
+
+    <!-- Polynomial Regression Form -->
+    <h2>Polynomial Regression</h2>
+    <form action="/predict/polynomial" method="post">
+        <label for="feature">Advertising Budget ($):</label>
+        <input type="number" id="feature" name="feature" required>
+        <button type="submit">Predict Sales</button>
+    </form>
+
+    <!-- Logistic Regression Form -->
+    <h2>Logistic Regression</h2>
+    <form action="/predict/logistic" method="post">
+        <label for="age">Customer Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="credit">Credit Score:</label>
+        <input type="number" id="credit" name="credit" required>
+
+        <button type="submit">Predict Purchase</button>
+    </form>
+</body>
+</html>
